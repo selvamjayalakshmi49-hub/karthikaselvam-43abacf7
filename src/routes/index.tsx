@@ -781,7 +781,7 @@ function Contact() {
           {[
             { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/karthika-selvam-490723333", href: "https://linkedin.com/in/karthika-selvam-490723333" },
             { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
-            { icon: Mail, label: "Email", value: "karthika.selvam@gmail.com", href: "mailto:karthika.selvam@gmail.com" },
+            { icon: Mail, label: "Email", value: "6383201011", href: "mailto:karthika.selvam@gmail.com" },
             { icon: MapPin, label: "Location", value: "Tamil Nadu, India" },
           ].map((c, i) => {
             const Inner = (
