@@ -763,6 +763,9 @@ function Services() {
 
 function Contact() {
   const [sent, setSent] = useState(false);
+  const [sending, setSending] = useState(false);
+  const [error, setError] = useState<string | null>(null);
+  const formRef = useRef<HTMLFormElement>(null);
   return (
     <Section
       id="contact"
@@ -799,10 +802,29 @@ function Contact() {
         </div>
 
         <form
-          onSubmit={(e) => {
+          ref={formRef}
+          onSubmit={async (e) => {
             e.preventDefault();
-            setSent(true);
-            setTimeout(() => setSent(false), 3000);
+            if (!formRef.current) return;
+            setSending(true);
+            setError(null);
+            try {
+              const emailjs = (await import("@emailjs/browser")).default;
+              await emailjs.sendForm(
+                "service_f8djxoo",
+                "template_6ka01xi",
+                formRef.current,
+                { publicKey: "Wi9qKyIFmdD7WRDG1" },
+              );
+              formRef.current.reset();
+              setSent(true);
+              setTimeout(() => setSent(false), 4000);
+            } catch (err) {
+              console.error(err);
+              setError("Failed to send. Please try again or email directly.");
+            } finally {
+              setSending(false);
+            }
           }}
           className="lg:col-span-3 glass rounded-3xl p-7 space-y-4"
         >
@@ -816,15 +838,24 @@ function Contact() {
             <textarea
               required
               rows={5}
+              name="message"
               placeholder="Tell me about your project or role…"
               className="mt-1.5 w-full rounded-xl border border-border bg-background/60 px-4 py-3 text-sm outline-none focus:border-accent focus:ring-2 focus:ring-accent/20 transition resize-none"
             />
           </div>
+          {error && <p className="text-sm text-destructive">{error}</p>}
           <button
             type="submit"
-            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition shadow-soft"
+            disabled={sending}
+            className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-medium text-primary-foreground hover:opacity-90 transition shadow-soft disabled:opacity-60"
           >
-            {sent ? (<><CheckCircle2 className="h-4 w-4" /> Message sent</>) : (<>Send message <Send className="h-4 w-4" /></>)}
+            {sent ? (
+              <><CheckCircle2 className="h-4 w-4" /> Message sent</>
+            ) : sending ? (
+              <>Sending…</>
+            ) : (
+              <>Send message <Send className="h-4 w-4" /></>
+            )}
           </button>
         </form>
       </div>
