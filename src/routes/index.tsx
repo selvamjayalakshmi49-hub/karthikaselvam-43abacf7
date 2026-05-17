@@ -108,6 +108,7 @@ function Portfolio() {
       <Services />
       <Contact />
       <Footer />
+      <ChatWidget />
     </div>
   );
 }
