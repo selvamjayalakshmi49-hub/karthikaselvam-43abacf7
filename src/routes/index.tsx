@@ -259,8 +259,8 @@ function HeroVisual() {
           src={profileImg}
           alt="Karthika Selvam"
           width={1024}
-          height={1280}
-          className="absolute inset-0 h-full w-full object-cover object-top"
+          height={1024}
+          className="absolute inset-0 h-full w-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-gradient-to-t from-primary/60 via-transparent to-transparent" />
         <div className="absolute bottom-5 left-5 right-5 glass rounded-2xl p-4 flex items-center gap-3">
