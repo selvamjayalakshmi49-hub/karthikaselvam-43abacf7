@@ -27,6 +27,7 @@ import {
   Github,
 } from "lucide-react";
 import profileImg from "@/assets/karthika-profile.jpg";
+import { ChatWidget } from "@/components/ChatWidget";
 
 export const Route = createFileRoute("/")({
   component: Portfolio,
