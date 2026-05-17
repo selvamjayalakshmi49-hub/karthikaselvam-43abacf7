@@ -777,9 +777,9 @@ function Contact() {
       <div className="grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2 space-y-4">
           {[
-            { icon: Mail, label: "Email", value: "karthika.selvam@example.com", href: "mailto:karthika.selvam@example.com" },
+            { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/karthika-selvam-490723333", href: "https://linkedin.com/in/karthika-selvam-490723333" },
             { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
-            { icon: Linkedin, label: "LinkedIn", value: "/in/karthika-selvam", href: "https://linkedin.com" },
+            { icon: Mail, label: "Email", value: "karthika.selvam@gmail.com", href: "mailto:karthika.selvam@gmail.com" },
             { icon: MapPin, label: "Location", value: "Tamil Nadu, India" },
           ].map((c, i) => {
             const Inner = (
