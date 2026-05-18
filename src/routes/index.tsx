@@ -831,8 +831,8 @@ function Contact() {
           className="lg:col-span-3 glass rounded-3xl p-7 space-y-4"
         >
           <div className="grid sm:grid-cols-2 gap-4">
-            <Field label="Name" name="name" placeholder="Your name" />
-            <Field label="Email" name="email" type="email" placeholder="you@email.com" />
+            <Field label="Name" name="user_name" placeholder="Your name" />
+            <Field label="Email" name="user_email" type="email" placeholder="you@email.com" />
           </div>
           <Field label="Subject" name="subject" placeholder="Let's talk about…" />
           <div>
