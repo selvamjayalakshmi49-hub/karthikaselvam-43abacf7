@@ -779,9 +779,9 @@ function Contact() {
       <div className="grid lg:grid-cols-5 gap-8">
         <div className="lg:col-span-2 space-y-4">
           {[
-            { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/karthika-selvam-490723333", href: "https://linkedin.com/in/karthika-selvam-490723333" },
-            { icon: Phone, label: "Phone", value: "www.linkedin.com/in/karthikaselvam-dataanalyst", href: "https://www.linkedin.com/in/karthikaselvam-dataanalyst" },
-            { icon: Mail, label: "Email", value: "6383201011", href: "mailto:karthika.selvam@gmail.com" },
+            { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/karthikaselvam-dataanalyst", href: "https://www.linkedin.com/in/karthikaselvam-dataanalyst" },
+            { icon: Phone, label: "Phone", value: "+91 63832 01011", href: "tel:+916383201011" },
+            { icon: Mail, label: "Email", value: "karthika.selvam@gmail.com", href: "mailto:karthika.selvam@gmail.com" },
             { icon: MapPin, label: "Location", value: "Tamil Nadu, India" },
           ].map((c, i) => {
             const Inner = (
