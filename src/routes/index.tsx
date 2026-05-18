@@ -780,7 +780,7 @@ function Contact() {
         <div className="lg:col-span-2 space-y-4">
           {[
             { icon: Linkedin, label: "LinkedIn", value: "linkedin.com/in/karthika-selvam-490723333", href: "https://linkedin.com/in/karthika-selvam-490723333" },
-            { icon: Phone, label: "Phone", value: "+91 98765 43210", href: "tel:+919876543210" },
+            { icon: Phone, label: "Phone", value: "www.linkedin.com/in/karthikaselvam-dataanalyst", href: "https://www.linkedin.com/in/karthikaselvam-dataanalyst" },
             { icon: Mail, label: "Email", value: "6383201011", href: "mailto:karthika.selvam@gmail.com" },
             { icon: MapPin, label: "Location", value: "Tamil Nadu, India" },
           ].map((c, i) => {
