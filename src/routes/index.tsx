@@ -816,7 +816,7 @@ function Contact() {
                 "service_f8djxoo",
                 "template_6ka01xi",
                 formRef.current,
-                { publicKey: "Wi9qKyIFmdD7WRDG1" },
+                { publicKey: "service_f8djxoo" },
               );
               formRef.current.reset();
               setSent(true);
